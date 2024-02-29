@@ -1,0 +1,84 @@
+﻿@using Final_Project.Models
+@model Property
+
+<h1>Create Property</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="LOGO">LOGO:</label>
+        <input asp-for="LOGO" class="form-control" value="@Model?.LOGO" />
+        <span asp-validation-for="LOGO" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address1">Address1:</label>
+        <input asp-for="Address1" class="form-control" value="@Model?.Address1" />
+        <span asp-validation-for="Address1" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address2">Address2:</label>
+        <input asp-for="Address2" class="form-control" value="@Model?.Address2" />
+        <span asp-validation-for="Address2" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="City">City:</label>
+        <input asp-for="City" class="form-control" value="@Model?.City"></input>
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Region">Region:</label>
+        <input asp-for="Region" class="form-control" value="@Model?.Region"></input>
+        <span asp-validation-for="Region" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PropertySize">PropertySize by Metre:</label>
+        <input asp-for="PropertySize" class="form-control" value="@Model?.PropertySize"></input>
+        <span asp-validation-for="PropertySize" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NumBedrooms">NumBedrooms:</label>
+        <input asp-for="NumBedrooms" class="form-control" value="@Model?.NumBedrooms"></input>
+        <span asp-validation-for="NumBedrooms" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NumBathrooms">NumBathrooms:</label>
+        <input asp-for="NumBathrooms" class="form-control" value="@Model?.NumBathrooms"></input>
+        <span asp-validation-for="NumBathrooms" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EmployeeId">EmployeeId:</label>
+        <input asp-for="EmployeeId" class="form-control" value="@Model?.EmployeeId"></input>
+        <span asp-validation-for="EmployeeId" class="text-danger"></span>
+    </div>
+    @* <div class="form-group">
+        <label asp-for="PropertyStatus">PropertyStatus:</label>
+        <input asp-for="PropertyStatus" class="form-control" value="@Model?.PropertyStatus"></input>
+        <span asp-validation-for="PropertyStatus" class="text-danger"></span>
+    </div>*@
+    <div class="form-group">
+        <label asp-for="PropertyStatusId">PropertyStatusId:</label>
+        <input asp-for="PropertyStatusId" class="form-control" value="@Model?.PropertyStatusId"></input>
+        <span asp-validation-for="PropertyStatusId" class="text-danger"></span>
+    </div>
+   @*  <div class="form-group">
+        <label asp-for="PropertyType">PropertyType:</label>
+        <input asp-for="PropertyType" class="form-control" value="@Model?.PropertyType"></input>
+        <span asp-validation-for="PropertyType" class="text-danger"></span>
+    </div> *@
+    <div class="form-group">
+        <label asp-for="PropertyTypeId">PropertyTypeId:</label>
+        <input asp-for="PropertyTypeId" class="form-control" value="@Model?.PropertyTypeId"></input>
+        <span asp-validation-for="PropertyTypeId" class="text-danger"></span>
+    </div> 
+    @if (Model == null)
+    {
+        <button type="submit" class="btn btn-primary">Create</button>
+    }
+    else
+    {
+        <button type="submit" class="btn btn-primary">Edit</button>
+    }
+</form>
+
+
+
+

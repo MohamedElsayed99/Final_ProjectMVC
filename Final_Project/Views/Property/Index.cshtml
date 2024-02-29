@@ -1,0 +1,20 @@
+﻿@model List<Property>
+<div class="container row ">
+@foreach (var Prop in Model)
+{
+    <div class="card col-3 m-4" style="width: 18rem;">
+            <img src="@Prop.LOGO" class="card-img-top" alt="..." />
+        <div class="card-body">
+                <h5 class="card-title">@Prop.Address1</h5>
+                <p class="card-text">@Prop.Address2</p>
+                <p class="card-text">@Prop.City</p>
+                <p class="card-text">@Prop.Region</p>
+                <a class="mr-2 btn btn-primary" asp-action="Details" asp-route-id="@Prop.Id">Details</a>
+                <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@Prop.Id">Edit</a>
+                <a class="btn btn-dark" asp-action="Delete" asp-route-id="@Prop.Id">Delete</a>
+        </div>
+    </div>     
+}
+</div>
+<br><a class="btn btn-primary" style="text-align=center" asp-action="Create">Create New Property</a>
+
