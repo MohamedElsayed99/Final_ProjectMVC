@@ -20,9 +20,14 @@ namespace Final_Project.Controllers
 
         public IActionResult Privacy()
         {
+            Console.WriteLine("test1");
+            Console.WriteLine("test2");
+            Console.WriteLine("test6");
+
             return View();
         }
-            Console.WriteLine("test1");
+         
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
