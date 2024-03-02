@@ -22,6 +22,7 @@ namespace Final_Project.Controllers
         {
             return View();
         }
+            Console.WriteLine("test1");
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
